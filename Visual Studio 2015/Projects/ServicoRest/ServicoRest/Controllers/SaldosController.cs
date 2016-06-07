@@ -17,7 +17,7 @@ namespace ServicoRest.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: api/Saldos
+        // GET: api/Saldosasda
         public IQueryable<Saldo> GetSaldos()
         {
             return db.Saldos;
