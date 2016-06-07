@@ -1,0 +1,173 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.marginTop
+{
+    margin-top:40px;
+}
+
+
+
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color: #fff;
+  border-width: 5px 5px 0;
+}
+.tooltip-inner {
+  color: #000;
+  background: #fff;
+  border: solid 1px #fff;
+}
+
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color: #fff;
+  border-width: 5px 5px 0;
+}
+
+.space2{
+    padding-right:20px;
+}
+.tooltip-inner {
+  color: #000;
+  background: #fff;
+  border: solid 1px #fff;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.pesquisa 
+{
+    border-radius:9px;
+}
+
+.fonteDesafio 
+{
+    font-size:8px;
+    color:grey;
+}
+
+.alinhaCentro{
+
+    text-align:center;
+    text-decoration:none;
+    font-weight:900;
+    font-size:9px;
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; 
+  padding: 0;
+}
+
+.tags li {
+  float: left; 
+}
+
+#linhaRecentes {
+    margin-top:5px;
+    border-color:gray;
+}
+
+.tag {
+    background-color: #E0EAF1;
+    border-bottom: 1px solid #3E6D8E;
+    border-right: 1px solid #7F9FB6;
+    padding: 3px 4px 3px 4px;
+    margin-left: -10px;
+    text-decoration: none;
+    font-size: 90%;
+    line-height: 2.4;
+    white-space: nowrap;
+
+}
+
+
+
+#linkDiv:hover{
+ background-color:grey;
+ opacity:0.4;
+}
+
+.linebef{
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #000; 
+   line-height: 0.1em;
+   margin: 10px 0 20px;
+   padding-top:10px;
+}
+
+.linebef span { 
+    background:#fff; 
+    padding:0 10px; 
+}
+
+
+
+p + ul {
+    margin-top: -10px;
+}
+
+ul{
+    text-decoration:none;
+}
+
+.tagMargin {
+    padding: 0;
+    margin: 0;
+}
+
+.tagMargin {
+    display: inline-block;
+    margin-left:14px;
+    padding-left:10px;
+}
+
+li{
+     list-style-type: none;
+}
+
+input[type="text"]:focus {
+
+   
+
+}
+
+
+.titulo{
+    display:inline;
+}
+
+.seccaoDatas{
+    display:flex;
+    align-items: flex-end;
+}
+
+

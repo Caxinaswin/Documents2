@@ -1,0 +1,98 @@
+﻿@model CrowdTouring_Projeto.Models.Desafio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Desafio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoAvaliacao.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoAvaliacao.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoTrabalho)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoTrabalho)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Visualizacoes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Visualizacoes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCriacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataCriacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdSolucaoVencedora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdSolucaoVencedora)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DesafioId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,87 @@
+﻿@model CrowdTouring_Projeto.ViewModel.DesafioCreate
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+
+@using (Html.BeginForm("Create", "Desafios", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group" >
+        @Html.LabelFor(m => m.TipoTrabalho, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.TipoTrabalho, new { @class = "form-control", maxlength = 50, id = "TituloDesafio" })
+            <p id="caracteres"></p>
+        </div>
+    </div>
+    <br />
+    <div class="form-group marginTop">
+        @Html.LabelFor(m => m.Descricao, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.Descricao,10,25,new { @class = "form-control" })
+        </div>
+    </div>
+    <br />
+    <div class="marginTop" >
+        <p>Escolhe a tua localização</p>
+        <div id="map"style="width:500px; height:300px"> </div>
+    </div>
+    <div class="form-group marginTop">
+        @Html.LabelFor(m => m.ValorMonetario, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.ValorMonetario, new { @class = "form-control",type = "number" })
+        </div>
+    </div>
+        <div class="form‐group">
+        <div class="col‐md‐offset‐3 col‐md‐9">
+            <table class="marginTop">
+                <tr>
+                    @{int cnt = 0;
+                        List<CrowdTouring_Projeto.ViewModel.TagDesafio> Tags = ViewBag.TagsDesafio;
+                        foreach (var tag in Tags)
+                        {
+
+                            if (cnt++ % 3 == 0)
+                            {
+                                @:</tr><tr>
+                                }
+                            @: <td style="margin-right:15px">
+                                <input type="checkbox" name="selectedTag" value="@tag.TagId" checked="@tag.Seleccionado" />
+                                    @tag.Nome
+                                    @:</td>
+                            }
+                        @:</tr>
+                    }
+                </table>
+            </div>
+        </div>
+
+
+       @Html.HiddenFor(m => m.lat);
+       @Html.HiddenFor(m => m.lon);
+
+
+        <input type="file" name="file" class="marginTop" />
+        <button type="submit" class="btn btn-lg btn-primary marginTop">Criar Desafio</button>
+                        }
+
+<script src="~/Scripts/googleMaps.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsJgW2sXWkrM_kgAK5kF2TC2QMnHdv1G4&callback=initMap"
+        async defer></script>
+@Scripts.Render("~/bundles/jquery")
+<script>
+    var caracteres = 50;
+    $("#TituloDesafio").keypress(function (event) {
+        if (event.key == 08)
+            caracteres++;
+        else
+            caracteres--
+            $("#caracteres").html("faltam" + caracteres.toString() + "caracteres");
+        
+    });
+</script>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebApplication4.Models.Image>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+               <img src="~/Images/@Html.DisplayFor(modelItem => item.ImagePath)" />
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            </td>
+        </tr>
+    }
+
+</table>
+
